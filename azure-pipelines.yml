@@ -15,3 +15,10 @@ steps:
 
 - powershell: node_modules\.bin\jest
   displayName: 'jest test'
+
+- task: PublishTestResults@2
+  displayName: 'Publish Test Results'
+  inputs:
+    testResultsFiles: quality/junit.xml
+    testRunTitle: test results
+  condition: succeededOrFailed()
