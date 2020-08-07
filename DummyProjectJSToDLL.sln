@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "DummyProjectJSToDLL", "DummyProjectJSToDLL.njsproj", "{0FFE11DF-0AEC-4C8C-9748-0E2F01DEE049}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FFE11DF-0AEC-4C8C-9748-0E2F01DEE049}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FFE11DF-0AEC-4C8C-9748-0E2F01DEE049}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FFE11DF-0AEC-4C8C-9748-0E2F01DEE049}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FFE11DF-0AEC-4C8C-9748-0E2F01DEE049}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4940DDD6-1494-4888-807F-903D5C012F91}
+	EndGlobalSection
+EndGlobal

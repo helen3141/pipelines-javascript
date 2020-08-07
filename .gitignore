@@ -28,6 +28,9 @@ build/Release
 node_modules
 /package-lock.json
 
+obj
+bin
+
 # jest junit.xml
 quality
 

@@ -13,10 +13,12 @@ steps:
 - powershell: npm install
   displayName: 'npm install'
 
-- task: VSTest@2
-  inputs:
-    testSelector: testAssemblies
-    testAssemblyVer2: '**\\tests\\**'
+- powershell: vstest.console.exe $(System.DefaultWorkingDirectory)/NodejsConsoleApp23.njsproj
+  displayName: 'vs test'
+# - task: VSTest@2
+#   inputs:
+#     testSelector: testAssemblies
+#     testAssemblyVer2: '**\\tests\\**'
 
 # - powershell: node_modules\.bin\jest
 #   displayName: 'jest test'
