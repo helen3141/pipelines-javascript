@@ -10,17 +10,13 @@ pool:
   vmImage: 'windows-2019'
 
 steps:
-- powershell: npm install
-  displayName: 'npm install'
+- powershell: |
+    cd C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise
+    dir
+# - powershell: npm install
+#   displayName: 'npm install'
 
-- task: VSTest@2
-  inputs:
-    testSelector: 'testPlan'
-    testPlan: '1'
-    testSuite: '2'
-    testConfiguration: '2'
-    searchFolder: '$(System.DefaultWorkingDirectory)'
-    vsTestVersion: '16.0'
+
 
 # - task: VSTest@2
 #   inputs:
