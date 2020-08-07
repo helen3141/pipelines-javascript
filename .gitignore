@@ -28,4 +28,5 @@ build/Release
 node_modules
 /package-lock.json
 
-TEST-RESULTS.xml
+# jest junit.xml
+quality
