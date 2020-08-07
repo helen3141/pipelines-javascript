@@ -13,17 +13,22 @@ steps:
 - powershell: npm install
   displayName: 'npm install'
 
-- powershell: node_modules\.bin\jest
-  displayName: 'jest test'
-
-- task: PublishTestResults@2
-  displayName: 'Publish Test Results'
+- task: VSTest@2
   inputs:
-    testResultsFiles: quality/junit.xml
-    testRunTitle: test results
-  condition: succeededOrFailed()
+    testSelector: testAssemblies
+    testAssemblyVer2: '**\\tests\\**'
 
-- publish: $(System.DefaultWorkingDirectory)/test-results.json
-  artifact: test-results.json
-  condition: succeededOrFailed()
-  displayName: Publish JSON test results
+# - powershell: node_modules\.bin\jest
+#   displayName: 'jest test'
+
+# - task: PublishTestResults@2
+#   displayName: 'Publish Test Results'
+#   inputs:
+#     testResultsFiles: quality/junit.xml
+#     testRunTitle: test results
+#   condition: succeededOrFailed()
+
+# - publish: $(System.DefaultWorkingDirectory)/test-results.json
+#   artifact: test-results.json
+#   condition: succeededOrFailed()
+#   displayName: Publish JSON test results
