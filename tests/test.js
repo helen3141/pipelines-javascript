@@ -7,7 +7,7 @@ describe('Get results', function () {
 
     test('Should Sometimes Pass', () => {
         const someNum = Math.floor(Math.random() * 10);
-        console.log(someNum);
+        console.log('randomly chosen number: ' + someNum);
         expect(someNum).toBeGreaterThan(7);
     });
 
