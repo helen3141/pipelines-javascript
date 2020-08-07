@@ -10,12 +10,7 @@ pool:
   vmImage: 'windows-2019'
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
-
-- script: |
+- powershell: |
     npm install
     npm run test
   displayName: 'npm install and jest test'
