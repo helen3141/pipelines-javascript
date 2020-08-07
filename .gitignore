@@ -30,3 +30,6 @@ node_modules
 
 # jest junit.xml
 quality
+
+# custom reporter
+test-results.json

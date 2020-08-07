@@ -1,6 +1,7 @@
 module.exports = {
   reporters: [
     "default",
+    ["<rootDir>/customReporter.js", {}],
     ["jest-junit", {
       "output": "./quality/junit.xml",
       "ancestorSeparator": " > ",

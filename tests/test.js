@@ -1,12 +1,17 @@
-var assert = require('assert');
+jest.retryTimes(3);
 
-describe('String', function () {
-    describe('#indexOf', function () {
-        it('should return -1 when the substring is not present', function () {
-            var myString = 'test';
+describe('Get results', function () {
+    test('Should Always Pass', () => {
+        expect(1).toBe(1);
+    });
 
-            assert.equal(-1, myString.indexOf('x'));
-            assert.equal(-1, myString.indexOf('y'));
-        });
+    test('Should Sometimes Pass', () => {
+        const someNum = Math.floor(Math.random() * 10);
+        console.log(someNum);
+        expect(someNum).toBeGreaterThan(5);
+    });
+
+    test('Should Always Fail', () => {
+        expect(2).toBe(1);
     });
 });

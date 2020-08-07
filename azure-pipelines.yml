@@ -22,3 +22,8 @@ steps:
     testResultsFiles: quality/junit.xml
     testRunTitle: test results
   condition: succeededOrFailed()
+
+- publish: $(System.DefaultWorkingDirectory)/test-results.json
+  artifact: test-results.json
+  condition: succeededOrFailed()
+  displayName: Publish JSON test results
