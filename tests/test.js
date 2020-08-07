@@ -1,4 +1,4 @@
-jest.retryTimes(3);
+jest.retryTimes(2);
 
 describe('Get results', function () {
     test('Should Always Pass', () => {
@@ -8,7 +8,7 @@ describe('Get results', function () {
     test('Should Sometimes Pass', () => {
         const someNum = Math.floor(Math.random() * 10);
         console.log(someNum);
-        expect(someNum).toBeGreaterThan(5);
+        expect(someNum).toBeGreaterThan(7);
     });
 
     test('Should Always Fail', () => {
