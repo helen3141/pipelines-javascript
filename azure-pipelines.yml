@@ -14,6 +14,9 @@ steps:
     npm install
     npm run build
   displayName: 'npm install'
+- powershell: |
+    dir
+  displayName: 'list files'
 - task: VSTest@2
   inputs:
     testSelector: 'testAssemblies'
