@@ -10,7 +10,9 @@ pool:
   vmImage: 'windows-2019'
 
 steps:
-- powershell: npm install
+- powershell: |
+    npm install
+    npm run build
   displayName: 'npm install'
 - task: VSTest@2
   inputs:
