@@ -1,15 +1,15 @@
 {
    "compilerOptions": {
+      "moduleResolution": "node",
+      "module": "esnext",
       "target": "ES6",
       "outDir": "./dist",
-      "allowJs": true
    },
    "include": [
-      "src/**/*",
+      "server.ts",
+      "tests/*"
    ],
    "exclude": [
-      "**/node_modules/**",
-      "**/*.spec.ts",
-      "**/*.spec.tsx",
+      "**/node_modules/**"
    ]
 }

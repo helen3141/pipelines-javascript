@@ -1,3 +1,4 @@
+// @ts-ignore
 jest.retryTimes(2);
 
 describe('Get results', function () {

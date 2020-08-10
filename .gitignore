@@ -36,3 +36,6 @@ quality
 
 # custom reporter
 test-results.json
+
+# typescript transpiled outdir
+dist

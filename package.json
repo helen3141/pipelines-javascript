@@ -4,7 +4,13 @@
   "version": "0.0.0",
   "description": "Hello World",
   "main": "server.js",
-  "dependencies": {
+  "scripts": {
+    "build": "node_modules\\.bin\\tsc -b --verbose",
+    "test": "node_modules\\.bin\\jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.14",
+    "@types/node": "^9.4.6",
     "express": "^4.13.3",
     "jest": "^23.6.0",
     "jest-circus": "^23.6.0",
@@ -12,9 +18,8 @@
     "jest-each": "^24.5.0",
     "jest-editor-support": "^27.2.0",
     "jest-fetch-mock": "^1.6.6",
-    "jest-junit": "^5.2.0"
-  },
-  "scripts": {
-    "test": "node_modules\\.bin\\jest"
+    "jest-junit": "^5.2.0",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.9.7"
   }
 }
