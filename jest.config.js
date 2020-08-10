@@ -9,7 +9,5 @@ module.exports = {
       "titleTemplate": "{title}"
     }]
   ],
-  testRunner: "jest-circus/runner",
-  testRegex: ".*tests.*",
-  moduleFileExtensions: ["mjs", "js", "jsx", "json"]
+  testRunner: "jest-circus/runner"
 }
