@@ -10,4 +10,6 @@ module.exports = {
     }]
   ],
   testRunner: "jest-circus/runner",
+  testRegex: ".*tests.*",
+  moduleFileExtensions: ["ts", "tsx", "mjs", "js", "jsx", "json"]
 }
