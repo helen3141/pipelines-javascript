@@ -38,4 +38,4 @@ quality
 test-results.json
 
 # typescript transpiled outdir
-dist
+*.spec.js

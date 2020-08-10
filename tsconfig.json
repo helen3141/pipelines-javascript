@@ -2,8 +2,7 @@
    "compilerOptions": {
       "moduleResolution": "node",
       "module": "esnext",
-      "target": "ES6",
-      "outDir": "./dist",
+      "target": "ES6"
    },
    "include": [
       "server.ts",
