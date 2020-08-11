@@ -21,7 +21,7 @@ steps:
     testAssemblyVer2: '**\DummyProjectJSToDLL.njsproj'
     searchFolder: '$(System.DefaultWorkingDirectory)'
     otherConsoleOptions: '/TestAdapterPath:"C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\Extensions\Microsoft\NodeJsTools\TestAdapter"'
-    rerunFailedTests: True
+    rerunFailedTests: true
     rerunMaxAttempts: 5
 
 
