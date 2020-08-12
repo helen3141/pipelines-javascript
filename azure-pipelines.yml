@@ -21,7 +21,7 @@ steps:
     testAssemblyVer2: '**\DummyProjectJSToDLL.njsproj'
     searchFolder: '$(System.DefaultWorkingDirectory)'
     pathtoCustomTestAdapters: 'C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\Extensions\Microsoft\NodeJsTools\TestAdapter'
-    otherConsoleOptions: 'Diag:"$(System.DefaultWorkingDirectory)\diag.txt" /ResultsDirectory:"$(System.DefaultWorkingDirectory)\results" /collect:"Event Log"'
+    otherConsoleOptions: 'Diag:"$(System.DefaultWorkingDirectory)\results\diag.txt" /ResultsDirectory:"$(System.DefaultWorkingDirectory)\results" /collect:"Event Log"'
     #these seem to do nothing
     rerunFailedTests: true
     rerunMaxAttempts: 5
@@ -30,6 +30,10 @@ steps:
 
 - powershell: dir
   condition: succeededOrFailed()
+- publish: $(System.DefaultWorkingDirectory)/results
+  artifact: results
+  condition: succeededOrFailed()
+  displayName: Publish Results
 # - task: VSTest@2
 #   inputs:
 #     testSelector: testAssemblies
