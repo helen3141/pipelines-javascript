@@ -39,3 +39,5 @@ test-results.json
 
 # typescript transpiled outdir
 *.spec.js
+
+.vs

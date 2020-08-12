@@ -20,7 +20,9 @@ steps:
     testSelector: 'testAssemblies'
     testAssemblyVer2: '**\DummyProjectJSToDLL.njsproj'
     searchFolder: '$(System.DefaultWorkingDirectory)'
-    otherConsoleOptions: '/TestAdapterPath:"C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\Extensions\Microsoft\NodeJsTools\TestAdapter"'
+    pathtoCustomTestAdapters: 'C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\Extensions\Microsoft\NodeJsTools\TestAdapter'
+    #otherConsoleOptions: '/TestAdapterPath:"C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\Extensions\Microsoft\NodeJsTools\TestAdapter"'
+    #these seem to do nothing
     rerunFailedTests: true
     rerunMaxAttempts: 5
     diagnosticsEnabled: true
@@ -41,7 +43,7 @@ steps:
 #     testRunTitle: test results
 #   condition: succeededOrFailed()
 
-# - publish: $(System.DefaultWorkingDirectory)/test-results.json
-#   artifact: test-results.json
-#   condition: succeededOrFailed()
-#   displayName: Publish JSON test results
+- publish: $(System.DefaultWorkingDirectory)/test-results.json
+  artifact: test-results.json
+  condition: succeededOrFailed()
+  displayName: Publish JSON test results
