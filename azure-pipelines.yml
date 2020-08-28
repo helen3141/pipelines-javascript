@@ -28,7 +28,14 @@ steps:
     diagnosticsEnabled: true
     collectDumpOn: always
 
-- publish: $(System.DefaultWorkingDirectory)/1.png
+- powershell: |
+    $files = Get-ChildItem -Path $(System.DefaultWorkingDirectory) -Force
+    ForEach ($file in $files) {
+      write-host $file
+    }
+  condition: succeededOrFailed()
+
+- publish: 1.png
   artifact: screenshot
   condition: succeededOrFailed()
   displayName: Publish Test Screenshots
