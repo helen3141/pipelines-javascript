@@ -31,7 +31,7 @@ steps:
 - powershell: |
     $files = Get-ChildItem -Path $(System.DefaultWorkingDirectory) -Force -Recurse
     ForEach ($file in $files) {
-      write-host $file
+      write-host $file.FullName
     }
   condition: succeededOrFailed()
 
