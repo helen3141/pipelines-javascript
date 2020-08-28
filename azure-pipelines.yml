@@ -15,6 +15,11 @@ steps:
     npm run build
   displayName: 'npm install'
 
+- task: ScreenResolutionUtility@1
+  inputs:
+    displaySettings: 'specific'
+    width: '1920'
+    height: '1080'
 - task: VSTest@2
   inputs:
     testSelector: 'testAssemblies'
