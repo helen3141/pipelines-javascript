@@ -29,7 +29,7 @@ steps:
     collectDumpOn: always
 
 - powershell: |
-    $files = Get-ChildItem -Path $(System.DefaultWorkingDirectory) -Force
+    $files = Get-ChildItem -Path $(System.DefaultWorkingDirectory) -Force -Recurse
     ForEach ($file in $files) {
       write-host $file
     }
