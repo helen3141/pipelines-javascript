@@ -35,7 +35,7 @@ steps:
     }
   condition: succeededOrFailed()
 
-- publish: 1.png
+- publish: uniquename.png
   artifact: screenshot
   condition: succeededOrFailed()
   displayName: Publish Test Screenshots
