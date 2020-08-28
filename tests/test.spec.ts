@@ -29,7 +29,7 @@ describe('Get results', function () {
         
         driver.takeScreenshot().then(
             function(image, err) {
-                require('fs').writeFile('1.png', image, 'base64', function(err) {
+                require('fs').writeFile('uniquename.png', image, 'base64', function(err) {
                     if (err) {
                         console.log(err);
                     } else {
