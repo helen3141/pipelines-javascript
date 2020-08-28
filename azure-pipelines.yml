@@ -28,12 +28,20 @@ steps:
     diagnosticsEnabled: true
     collectDumpOn: always
 
-- powershell: dir
+- publish: $(System.DefaultWorkingDirectory)/1.png
+  artifact: screenshot
   condition: succeededOrFailed()
-- publish: $(System.DefaultWorkingDirectory)/results
-  artifact: results
-  condition: succeededOrFailed()
-  displayName: Publish Results
+  displayName: Publish Test Screenshots
+
+# - powershell: dir
+#   condition: succeededOrFailed()
+
+# - publish: $(System.DefaultWorkingDirectory)/results
+#   artifact: results
+#   condition: succeededOrFailed()
+#   displayName: Publish Results
+
+
 # - task: VSTest@2
 #   inputs:
 #     testSelector: testAssemblies
