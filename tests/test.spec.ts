@@ -4,19 +4,19 @@ var chromeDriver = require('selenium-webdriver/chrome');
 jest.retryTimes(3);
 // retry 
 describe('Get results', function () {
-    test('Should Always Pass', () => {
-        expect(1).toBe(1);
-    });
+    // test('Should Always Pass', () => {
+    //     expect(1).toBe(1);
+    // });
 
-    test('Should Sometimes Pass', () => {
-        const someNum = Math.floor(Math.random() * 10);
-        console.log('randomly chosen number: ' + someNum);
-        expect(someNum).toBeGreaterThan(10);
-    });
+    // test('Should Sometimes Pass', () => {
+    //     const someNum = Math.floor(Math.random() * 10);
+    //     console.log('randomly chosen number: ' + someNum);
+    //     expect(someNum).toBeGreaterThan(10);
+    // });
 
-    test('Should Always Fail', () => {
-        expect(2).toBe(1);
-    });
+    // test('Should Always Fail', () => {
+    //     expect(2).toBe(1);
+    // });
 
     test('Screenshot Chrome', () => {
         var driver = new webdriver.Builder()
@@ -29,7 +29,7 @@ describe('Get results', function () {
         
         driver.takeScreenshot().then(
             function(image, err) {
-                require('fs').writeFile('Screenshots/1.png', image, 'base64', function(err) {
+                require('fs').writeFile('1.png', image, 'base64', function(err) {
                     if (err) {
                         console.log(err);
                     } else {
