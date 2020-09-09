@@ -10,16 +10,17 @@ pool:
   vmImage: 'windows-2019'
 
 steps:
+# - task: ScreenResolutionUtility@1
+#   inputs:
+#     displaySettings: 'specific'
+#     width: '1920'
+#     height: '1080'
+
 - powershell: |
     npm install
     npm run build
   displayName: 'npm install'
 
-- task: ScreenResolutionUtility@1
-  inputs:
-    displaySettings: 'specific'
-    width: '1920'
-    height: '1080'
 - task: VSTest@2
   inputs:
     testSelector: 'testAssemblies'
@@ -33,20 +34,11 @@ steps:
     diagnosticsEnabled: true
     collectDumpOn: always
 
-- powershell: |
-    $files = Get-ChildItem -Path $(System.DefaultWorkingDirectory) -Force -Recurse
-    ForEach ($file in $files) {
-      write-host $file.FullName
-    }
-  condition: succeededOrFailed()
-
-- publish: uniquename.png
-  artifact: screenshot
-  condition: succeededOrFailed()
-  displayName: Publish Test Screenshots
-
-# - powershell: dir
+# - publish: uniquename.png
+#   artifact: screenshot
 #   condition: succeededOrFailed()
+#   displayName: Publish Test Screenshots
+
 
 # - publish: $(System.DefaultWorkingDirectory)/results
 #   artifact: results
