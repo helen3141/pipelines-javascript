@@ -10,11 +10,11 @@ pool:
   vmImage: 'windows-2019'
 
 steps:
-# - task: ScreenResolutionUtility@1
-#   inputs:
-#     displaySettings: 'specific'
-#     width: '1920'
-#     height: '1080'
+- task: ScreenResolutionUtility@1
+  inputs:
+    displaySettings: 'specific'
+    width: '1920'
+    height: '1080'
 
 - powershell: |
     npm install
